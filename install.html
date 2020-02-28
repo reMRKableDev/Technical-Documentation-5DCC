@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body class="site_body">
+    <header>
+      <nav class="navbar" tabindex="0">
+        <div class="hamburger"></div>
+        <header class="avatar">
+          <img src="./img/reMRKabledev-avatar.png" />
+          <h2>Summary by <br />reMRKable Dev</h2>
+        </header>
+        <ul>
+          <li tabindex="0" class="icon-home">
+            <span><a href="./index.html">Home</a></span>
+          </li>
+          <li tabindex="0" class="icon-install">
+            <span><a href="./install.html">Install</a></span>
+          </li>
+          <li tabindex="0" class="icon-hello">
+            <span><a href="./hello-world.html">Hello World</a></span>
+          </li>
+          <li tabindex="0" class="icon-routing">
+            <span><a href="./routing.html">Routing</a></span>
+          </li>
+          <li tabindex="0" class="icon-references">
+            <span><a href="./references.html">References</a></span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="flex_row">
+        <section class="flex_column">
+          <nav class="side_nav" tabindex="0">
+            <div class="flex_row">
+              <div class="flex_column">
+                <header class="avatar">
+                  <img src="./img/reMRKabledev-avatar.png" />
+                  <h2>Summary by <br />reMRKable Dev</h2>
+                </header>
+                <ul>
+                  <li tabindex="0" class="icon-home">
+                    <span><a href="./index.html">Home</a></span>
+                  </li>
+                  <li tabindex="0" class="icon-install">
+                    <span><a href="./install.html">Install</a></span>
+                  </li>
+                  <li tabindex="0" class="icon-hello">
+                    <span><a href="./hello-world.html">Hello World</a></span>
+                  </li>
+                  <li tabindex="0" class="icon-routing">
+                    <span><a href="./routing.html">Routing</a></span>
+                  </li>
+                  <li tabindex="0" class="icon-references">
+                    <span><a href="./references.html">References</a></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </section>
+        <section class="flex_column_double">
+          <section class="hero hero_half">
+            <h1>
+              Installing
+            </h1>
+          </section>
+          <section class="info">
+            <p>
+              Assuming you’ve already installed
+              <a href="https://nodejs.org/">Node.js</a>, create a directory to
+              hold your application, and make that your working directory.
+            </p>
+            <pre><code class="double_code">$ mkdir myapp </code> <br/> <br/> <br/> <code class="double_code">$ cd myapp</code></pre>
+            <p>
+              Use the <code>npm init</code> command to create a
+              <code>package.json</code> file for your application. For more
+              information on how <code>package.json</code> works, see
+              <a href="https://docs.npmjs.com/files/package.json"
+                >Specifics of npm’s package.json handling</a
+              >.
+            </p>
+            <pre><code>$ npm init
+</code></pre>
+            <p>
+              This command prompts you for a number of things, such as the name
+              and version of your application. For now, you can simply hit
+              RETURN to accept the defaults for most of them, with the following
+              exception:
+            </p>
+            <pre><code>entry point: (index.js)
+</code></pre>
+            <p>
+              Enter <code>app.js</code>, or whatever you want the name of the
+              main file to be. If you want it to be <code>index.js</code>, hit
+              RETURN to accept the suggested default file name.
+            </p>
+            <p>
+              Now install Express in the <code>myapp</code> directory and save
+              it in the dependencies list. For example:
+            </p>
+            <pre><code>$ npm install express --save
+</code></pre>
+            <p>
+              To install Express temporarily and not add it to the dependencies
+              list:
+            </p>
+            <pre><code>$ npm install express --no-save
+</code></pre>
+            <div>
+              <p>
+                By default with version npm 5.0+ npm install adds the module to
+                the <code>dependencies</code> list in the
+                <code>package.json</code> file; with earlier versions of npm,
+                you must specify the <code>--save</code> option explicitly.
+                Then, afterwards, running <code>npm install</code> in the app
+                directory will automatically install modules in the dependencies
+                list.
+              </p>
+            </div>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <p>reMRKable Dev &copy; Copyright 2020</p>
+      <p>All rights reserved or whatever that means</p>
+    </footer>
+  </body>
+</html>

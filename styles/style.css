@@ -1,0 +1,321 @@
+@import "reset.css";
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Muli&display=swap");
+
+:root {
+  --brand-white: #ffffff;
+  --brand-ivory: #fffff0;
+  --brand-black: #000000;
+  --brand-blue: #6cd6d6;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--white);
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.site_body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site_content {
+  flex: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Muli";
+  letter-spacing: 2px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+p {
+  font-size: 1em;
+  line-height: 2.5em;
+  color: var(--white);
+}
+
+p,
+a,
+ul {
+  font-family: "Montserrat", sans-serif;
+}
+
+em {
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+pre,
+.pre {
+  border: 2px solid var(--brand-blue);
+  margin: 15px 0;
+  padding: 20px;
+}
+
+code {
+  border: 2px solid black;
+  font-family: "Muli";
+  color: var(--brand-black);
+  padding: 5px 13px;
+}
+
+.route_code code {
+  line-height: 2.5em;
+  border: none;
+}
+
+.route_code {
+  border: 2px solid var(--brand-black);
+  width: 350px;
+  padding: 0;
+  text-align: left;
+  display: flex;
+  justify-content: start;
+}
+
+.page {
+  height: 100vh;
+  text-align: center;
+}
+
+.flex_row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.flex_column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+}
+
+.navbar {
+  background-color: var(--brand-blue);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  outline: none;
+  width: 80vw;
+  box-shadow: 0 0 0 100em rgba(0, 0, 0, 0);
+  transform: translate3d(-80vw, 0, 0);
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar:focus {
+  transform: translate3d(0, 0, 0);
+  box-shadow: 0 0 0 100em rgba(0, 0, 0, 0.6);
+}
+
+.navbar .hamburger {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 100%;
+  background-color: var(--brand-blue);
+  border-left: none;
+}
+
+.navbar .hamburger:before,
+.navbar .hamburger:after {
+  content: "";
+  width: 50%;
+  height: 2px;
+  background: var(--brand-ivory);
+  border-radius: 10px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate3d(-30%, -70%, 0);
+}
+.navbar .hamburger:after {
+  top: 55%;
+  transform: translate3d(-70%, -30%, 0);
+}
+
+.navbar:focus .hamburger {
+  pointer-events: none;
+}
+
+.navbar .avatar,
+.side_nav .avatar {
+  background: var(--brand-ivory);
+  padding: 2em 0.5em;
+  text-align: center;
+}
+.navbar .avatar img,
+.side_nav .avatar img {
+  width: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--brand-blue);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
+}
+.navbar .avatar h2,
+.side_nav .avatar h2 {
+  margin-top: 5px;
+  line-height: 1.5em;
+}
+
+.navbar ul,
+.side_nav ul {
+  list-style: none;
+  padding: 0.5em 0;
+  margin: 0;
+}
+.navbar ul li,
+.side_nav ul li {
+  padding: 0.5em 1em 0.5em 3em;
+  font-weight: regular;
+  background-repeat: no-repeat;
+  background-position: left 15px center;
+  background-size: auto 30px;
+  transition: all 0.15s linear;
+  cursor: pointer;
+  text-align: right;
+  margin-bottom: 15px;
+}
+.navbar ul li.icon-home,
+.side_nav ul li.icon-home {
+  background-image: url("../img/home.svg");
+}
+.navbar ul li.icon-install,
+.side_nav ul li.icon-install {
+  background-image: url("../img/install.svg");
+}
+.navbar ul li.icon-hello,
+.side_nav ul li.icon-hello {
+  background-image: url("../img/hello-world.svg");
+}
+.navbar ul li.icon-routing,
+.side_nav ul li.icon-routing {
+  background-image: url("../img/routing.svg");
+}
+.navbar ul li.icon-static-files,
+.side_nav ul li.icon-static-files {
+  background-image: url("../img/static-page.svg");
+}
+.navbar ul li.icon-references,
+.side_nav ul li.icon-references {
+  background-image: url("../img/reference.svg");
+}
+.navbar ul li:hover,
+.side_nav ul li:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.navbar ul li:focus,
+.side_nav ul li:focus {
+  outline: none;
+}
+
+.side_nav {
+  display: none;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Crect stroke='%23ffffff' stroke-width='.5' width='1' height='1' id='s'/%3E%3Cpattern id='a' width='3' height='3' patternUnits='userSpaceOnUse' patternTransform='scale(19.15) translate(-947.78 -710.84)'%3E%3Cuse fill='%23fafafa' href='%23s' y='2'/%3E%3Cuse fill='%23fafafa' href='%23s' x='1' y='2'/%3E%3Cuse fill='%23f5f5f5' href='%23s' x='2' y='2'/%3E%3Cuse fill='%23f5f5f5' href='%23s'/%3E%3Cuse fill='%23f0f0f0' href='%23s' x='2'/%3E%3Cuse fill='%23f0f0f0' href='%23s' x='1' y='1'/%3E%3C/pattern%3E%3Cpattern id='b' width='7' height='11' patternUnits='userSpaceOnUse' patternTransform='scale(19.15) translate(-947.78 -710.84)'%3E%3Cg fill='%23ebebeb'%3E%3Cuse href='%23s'/%3E%3Cuse href='%23s' y='5' /%3E%3Cuse href='%23s' x='1' y='10'/%3E%3Cuse href='%23s' x='2' y='1'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='8'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='5' y='2'/%3E%3Cuse href='%23s' x='5' y='6'/%3E%3Cuse href='%23s' x='6' y='9'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='h' width='5' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(19.15) translate(-947.78 -710.84)'%3E%3Cg fill='%23ebebeb'%3E%3Cuse href='%23s' y='5'/%3E%3Cuse href='%23s' y='8'/%3E%3Cuse href='%23s' x='1' y='1'/%3E%3Cuse href='%23s' x='1' y='9'/%3E%3Cuse href='%23s' x='1' y='12'/%3E%3Cuse href='%23s' x='2'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='2'/%3E%3Cuse href='%23s' x='3' y='6'/%3E%3Cuse href='%23s' x='3' y='11'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='4' y='10'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='c' width='17' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(19.15) translate(-947.78 -710.84)'%3E%3Cg fill='%23e5e5e5'%3E%3Cuse href='%23s' y='11'/%3E%3Cuse href='%23s' x='2' y='9'/%3E%3Cuse href='%23s' x='5' y='12'/%3E%3Cuse href='%23s' x='9' y='4'/%3E%3Cuse href='%23s' x='12' y='1'/%3E%3Cuse href='%23s' x='16' y='6'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='d' width='19' height='17' patternUnits='userSpaceOnUse' patternTransform='scale(19.15) translate(-947.78 -710.84)'%3E%3Cg fill='%23ffffff'%3E%3Cuse href='%23s' y='9'/%3E%3Cuse href='%23s' x='16' y='5'/%3E%3Cuse href='%23s' x='14' y='2'/%3E%3Cuse href='%23s' x='11' y='11'/%3E%3Cuse href='%23s' x='6' y='14'/%3E%3C/g%3E%3Cg fill='%23e0e0e0'%3E%3Cuse href='%23s' x='3' y='13'/%3E%3Cuse href='%23s' x='9' y='7'/%3E%3Cuse href='%23s' x='13' y='10'/%3E%3Cuse href='%23s' x='15' y='4'/%3E%3Cuse href='%23s' x='18' y='1'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='e' width='47' height='53' patternUnits='userSpaceOnUse' patternTransform='scale(19.15) translate(-947.78 -710.84)'%3E%3Cg fill='%236cd6d6'%3E%3Cuse href='%23s' x='2' y='5'/%3E%3Cuse href='%23s' x='16' y='38'/%3E%3Cuse href='%23s' x='46' y='42'/%3E%3Cuse href='%23s' x='29' y='20'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='f' width='59' height='71' patternUnits='userSpaceOnUse' patternTransform='scale(19.15) translate(-947.78 -710.84)'%3E%3Cg fill='%236cd6d6'%3E%3Cuse href='%23s' x='33' y='13'/%3E%3Cuse href='%23s' x='27' y='54'/%3E%3Cuse href='%23s' x='55' y='55'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='g' width='139' height='97' patternUnits='userSpaceOnUse' patternTransform='scale(19.15) translate(-947.78 -710.84)'%3E%3Cg fill='%236cd6d6'%3E%3Cuse href='%23s' x='11' y='8'/%3E%3Cuse href='%23s' x='51' y='13'/%3E%3Cuse href='%23s' x='17' y='73'/%3E%3Cuse href='%23s' x='99' y='57'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23b)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23h)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23c)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23d)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23e)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23f)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23g)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  flex-direction: column;
+}
+
+.hero_full {
+  height: 100vh;
+}
+
+.hero_full p {
+  margin-top: 15px;
+}
+
+.hero_half {
+  height: 50vh;
+}
+
+.hero h1 {
+  font-size: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.5em;
+}
+
+.info {
+  padding: 25px 50px;
+}
+
+footer {
+  background-color: var(--brand-black);
+  color: var(--brand-white);
+  text-align: right;
+  padding: 5px 15px;
+}
+
+footer p {
+  line-height: 1.5em;
+}
+
+@media (min-width: 568px) {
+  .navbar .avatar {
+    padding: 0.5em 0.5em;
+  }
+
+  .navbar .avatar img {
+    width: 50px;
+    border: 2px solid var(--brand-blue);
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar .hamburger {
+    display: none;
+  }
+
+  .side_nav {
+    display: block;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+    width: 20%;
+    background-color: var(--brand-blue);
+  }
+
+  .flex_column {
+    flex: 1;
+  }
+
+  .flex_column_double {
+    flex: 4;
+  }
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body class="site_body">
+    <header>
+      <nav class="navbar" tabindex="0">
+        <div class="hamburger"></div>
+        <header class="avatar">
+          <img src="./img/reMRKabledev-avatar.png" />
+          <h2>Summary by <br />reMRKable Dev</h2>
+        </header>
+        <ul>
+          <li tabindex="0" class="icon-home">
+            <span><a href="./index.html">Home</a></span>
+          </li>
+          <li tabindex="0" class="icon-install">
+            <span><a href="./install.html">Install</a></span>
+          </li>
+          <li tabindex="0" class="icon-hello">
+            <span><a href="./hello-world.html">Hello World</a></span>
+          </li>
+          <li tabindex="0" class="icon-routing">
+            <span><a href="./routing.html">Routing</a></span>
+          </li>
+          <li tabindex="0" class="icon-references">
+            <span><a href="./references.html">References</a></span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="flex_row">
+        <section class="flex_column">
+          <nav class="side_nav" tabindex="0">
+            <div class="flex_row">
+              <div class="flex_column">
+                <header class="avatar">
+                  <img src="./img/reMRKabledev-avatar.png" />
+                  <h2>Summary by <br />reMRKable Dev</h2>
+                </header>
+                <ul>
+                  <li tabindex="0" class="icon-home">
+                    <span><a href="./index.html">Home</a></span>
+                  </li>
+                  <li tabindex="0" class="icon-install">
+                    <span><a href="./install.html">Install</a></span>
+                  </li>
+                  <li tabindex="0" class="icon-hello">
+                    <span><a href="./hello-world.html">Hello World</a></span>
+                  </li>
+                  <li tabindex="0" class="icon-routing">
+                    <span><a href="./routing.html">Routing</a></span>
+                  </li>
+                  <li tabindex="0" class="icon-references">
+                    <span><a href="./references.html">References</a></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </section>
+        <section class="flex_column_double">
+          <section class="hero hero_half">
+            <h1>
+              Routing
+            </h1>
+          </section>
+          <section class="info">
+            <p>
+              <em>Routing</em> refers to determining how an application responds
+              to a client request to a particular endpoint, which is a URI (or
+              path) and a specific HTTP request method (GET, POST, and so on).
+            </p>
+            <p>
+              Each route can have one or more handler functions, which are
+              executed when the route is matched.
+            </p>
+            <p>Route definition takes the following structure:</p>
+            <pre><code class="language-js">app.METHOD(PATH, HANDLER)
+</code></pre>
+            <p>Where:</p>
+            <ul class="pre">
+              <li><code>app</code> is an instance of <code>express</code>.</li>
+              <br /><br />
+              <li>
+                <code>METHOD</code> is an
+                <a
+                  href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods"
+                  >HTTP request method</a
+                >, in lowercase.
+              </li>
+              <br /><br />
+              <li><code>PATH</code> is a path on the server.</li>
+              <br /><br />
+              <li>
+                <code>HANDLER</code> is the function executed when the route is
+                matched.
+              </li>
+            </ul>
+            <div>
+              <p>
+                This tutorial assumes that an instance of
+                <code>express</code> named <code>app</code> is created and the
+                server is running. If you are not familiar with creating an app
+                and starting it, see the
+                <a href="/en/starter/hello-world.html">Hello world example</a>.
+              </p>
+            </div>
+            <p>The following examples illustrate defining simple routes.</p>
+            <p>Respond with <code>Hello World!</code> on the homepage:</p>
+            <pre>
+              <div class="route_code">
+                <code>app.get( ' / ', function (req, res) { <br>res.send('Hello World!') <br>})</code>
+              </div>
+            </pre>
+            <p>
+              Respond to POST request on the root route (<code>/</code>), the
+              application’s home page:
+            </p>
+            <pre>
+              <div class="route_code">
+                <code>app.post( ' / ', function (req, res) { <br>res.send('Got a POST request') <br>})</code>
+              </div>
+            </pre>
+            <p>Respond to a PUT request to the <code>/user</code> route:</p>
+            <pre>
+              <div class="route_code">
+                <code>app.put( ' / ', function (req, res) { <br>res.send('Got a PUT request at /user') <br>})</code>
+              </div>
+            </pre>
+            <p>Respond to a DELETE request to the <code>/user</code> route:</p>
+            <pre>
+              <div class="route_code">
+                <code>app.delete( ' / ', function (req, res) { <br>res.send('Got a DELETE request at /user') <br>})</code>
+              </div>
+            </pre>
+            <p>
+              For more details about routing, see the
+              <a href="/en/guide/routing.html">routing guide</a>.
+            </p>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <p>reMRKable Dev &copy; Copyright 2020</p>
+      <p>All rights reserved or whatever that means</p>
+    </footer>
+  </body>
+</html>

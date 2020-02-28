@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body class="site_body">
+    <header>
+      <nav class="navbar" tabindex="0">
+        <div class="hamburger"></div>
+        <header class="avatar">
+          <img src="./img/reMRKabledev-avatar.png" />
+          <h2>Summary by <br />reMRKable Dev</h2>
+        </header>
+        <ul>
+          <li tabindex="0" class="icon-home">
+            <span><a href="./index.html">Home</a></span>
+          </li>
+          <li tabindex="0" class="icon-install">
+            <span><a href="./install.html">Install</a></span>
+          </li>
+          <li tabindex="0" class="icon-hello">
+            <span><a href="./hello-world.html">Hello World</a></span>
+          </li>
+          <li tabindex="0" class="icon-routing">
+            <span><a href="./routing.html">Routing</a></span>
+          </li>
+          <li tabindex="0" class="icon-references">
+            <span><a href="./references.html">References</a></span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="flex_row">
+        <section class="flex_column">
+          <nav class="side_nav" tabindex="0">
+            <div class="flex_row">
+              <div class="flex_column">
+                <header class="avatar">
+                  <img src="./img/reMRKabledev-avatar.png" />
+                  <h2>Summary by <br />reMRKable Dev</h2>
+                </header>
+                <ul>
+                  <li tabindex="0" class="icon-home">
+                    <span><a href="./index.html">Home</a></span>
+                  </li>
+                  <li tabindex="0" class="icon-install">
+                    <span><a href="./install.html">Install</a></span>
+                  </li>
+                  <li tabindex="0" class="icon-hello">
+                    <span><a href="./hello-world.html">Hello World</a></span>
+                  </li>
+                  <li tabindex="0" class="icon-routing">
+                    <span><a href="./routing.html">Routing</a></span>
+                  </li>
+                  <li tabindex="0" class="icon-references">
+                    <span><a href="./references.html">References</a></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </section>
+        <section class="flex_column_double">
+          <section class="hero hero_half">
+            <h1>
+              Hello World
+            </h1>
+          </section>
+          <section class="info">
+            <p>
+              Embedded below is essentially the simplest Express app you can
+              create. It is a single file app — <em>not</em> what you’d get if
+              you use the
+              <a href="/en/starter/generator.html">Express generator</a>, which
+              creates the scaffolding for a full app with numerous JavaScript
+              files, Jade templates, and sub-directories for various purposes.
+            </p>
+            <div id="hello-example">
+              <pre>
+                <code class="language-js">const express = require('express')</code><br><br>
+                <code>const app = express()</code><br><br>
+                <code>const port = 3000</code><br><br>
+                <code>app.get(' / ', (req, res) =&gt; res.send('Hello World!'))</code><br><br>
+                <code>app.listen(port, () =&gt; console.log(`Example app listening on port ${port}!`))</code>
+              </pre>
+            </div>
+            <p>
+              This app starts a server and listens on port 3000 for connections.
+              The app responds with “Hello World!” for requests to the root URL
+              (<code>/</code>) or <em>route</em>. For every other path, it will
+              respond with a <strong>404 Not Found</strong>.
+            </p>
+            <p>
+              The example above is actually a working server: Go ahead and click
+              on the URL shown. You’ll get a response, with real-time logs on
+              the page, and any changes you make will be reflected in real time.
+              This is powered by <a href="https://runkit.com">RunKit</a>, which
+              provides an interactive JavaScript playground connected to a
+              complete Node environment that runs in your web browser. Below are
+              instructions for running the same app on your local machine.
+            </p>
+            <div class="doc-box doc-info">
+              <p>
+                RunKit is a third-party service not affiliated with the Express
+                project.
+              </p>
+            </div>
+            <h3 id="running-locally">Running Locally</h3>
+            <p>
+              First create a directory named <code>myapp</code>, change to it
+              and run <code>npm init</code>. Then install
+              <code>express</code> as a dependency, as per the
+              <a href="/en/starter/installing.html">installation guide</a>.
+            </p>
+            <p>
+              In the <code>myapp</code> directory, create a file named
+              <code>app.js</code> and copy in the code from the example above.
+            </p>
+            <div class="doc-box doc-notice">
+              <p>
+                The <code>req</code> (request) and <code>res</code> (response)
+                are the exact same objects that Node provides, so you can invoke
+                <code>req.pipe()</code>, <code>req.on('data', callback)</code>,
+                and anything else you would do without Express involved.
+              </p>
+            </div>
+            <p>Run the app with the following command:</p>
+            <pre><code>$ node app.js
+</code></pre>
+            <p>
+              Then, load <code>http://localhost:3000/</code> in a browser to see
+              the output.
+            </p>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <p>reMRKable Dev &copy; Copyright 2020</p>
+      <p>All rights reserved or whatever that means</p>
+    </footer>
+  </body>
+</html>
